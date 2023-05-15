@@ -1,0 +1,25 @@
+.gridContainer {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-gap: 0px 36px;
+  padding: 0 24px;
+}
+.cardFooter {
+  font-size: 0.8rem;
+  padding: 24px 0px 90px 0px;
+}
+
+.pageContainer {
+  background: #000;
+  color: #fff;
+}
+
+.listHeader {
+  display: flex;
+  justify-content: space-between;
+  padding: 36px 30px;
+}
+.listHeader p {
+  padding-left: 20px;
+  font-size: 1.3rem;
+}
