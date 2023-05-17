@@ -3,6 +3,8 @@
   grid-template-columns: auto auto auto;
   grid-gap: 0px 36px;
   padding: 0 24px;
+  background: #000;
+  padding-top: 162px;
 }
 .cardFooter {
   font-size: 0.8rem;
@@ -15,11 +17,33 @@
 }
 
 .listHeader {
-  display: flex;
+  /* display: flex; */
   justify-content: space-between;
-  padding: 36px 30px;
+  /* padding: 36px 30px; */
+  position: fixed;
+  top: 0px;
 }
 .listHeader p {
   padding-left: 20px;
   font-size: 1.3rem;
+}
+.navBar {
+  position: fixed;
+  z-index: 3;
+  display: flex;
+  top: 40px;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+}
+.navBar p{
+  padding-left: 30px;
+}
+
+.navBar img{
+  padding-right: 30px;
+}
+.navBar  p img{
+  padding-right: 10px;
 }

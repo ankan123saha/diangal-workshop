@@ -53,12 +53,15 @@ function MovieListContainer() {
   return (
     <div className={styles.pageContainer}>
       <div className={styles.listHeader}>
-        <div>
-          <img src="/Slices/Back.png" alt="" width="15px" height="auto" />
-          <span>Romantic Comedy</span>
-        </div>
+        <img src="Slices/nav_bar.png" alt="" />
+        <div className={styles.navBar}>
+          <p>
+            <img src="/Slices/Back.png" alt="" width="18px" height="auto" />
+            <span>Romantic Comedy</span>
+          </p>
 
-        <img src="/Slices/search.png" alt="" width="15px" height="15px" />
+          <img src="/Slices/search.png" alt="" width="18px" height="18px" />
+        </div>
       </div>{" "}
       <InfiniteScroll
         dataLength={movieList.length}
