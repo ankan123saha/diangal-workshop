@@ -6,6 +6,8 @@ import {
   advancePager,
 } from "../../redux-saga/redux/movieList";
 import styles from "./MovieListContainer.module.css";
+import MovieCard from "../MovieCard";
+import MovieListHeader from "../MovieListHeader";
 
 function MovieListContainer() {
   const [hasMore, setHasMore] = useState(true);
@@ -52,44 +54,16 @@ function MovieListContainer() {
 
   return (
     <div className={styles.pageContainer}>
-      <div className={styles.listHeader}>
-        <img src="Slices/nav_bar.png" alt="" />
-        <div className={styles.navBar}>
-          <p>
-            <img src="/Slices/Back.png" alt="" width="18px" height="auto" />
-            <span>Romantic Comedy</span>
-          </p>
-
-          <img src="/Slices/search.png" alt="" width="18px" height="18px" />
-        </div>
-      </div>{" "}
+      <MovieListHeader />
       <InfiniteScroll
         dataLength={movieList.length}
         className={styles.gridContainer}
         next={handleMoviesLoader}
         hasMore={pager?.page < 3}
       >
-        {movieList.map((movie, index) => {
-          const download_url = movie["poster-image"];
-          const name = movie.name;
-          return (
-            <div key={index} className="card">
-              <img
-                alt={name}
-                width="91px"
-                height="136px"
-                data-src={download_url}
-                onError={(e) => {
-                  e.currentTarget.src =
-                    "/Slices/placeholder_for_missing_posters.png";
-                }}
-                className="card-img-top"
-                src="/Slices/placeholder_for_missing_posters.png"
-              />
-              <div className={styles.cardFooter}>{name}</div>
-            </div>
-          );
-        })}
+        {movieList.map((movie, index) => (
+          <MovieCard key={index} movieData={movie} />
+        ))}
       </InfiniteScroll>
     </div>
   );
