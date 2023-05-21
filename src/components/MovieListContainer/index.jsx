@@ -35,7 +35,7 @@ function MovieListContainer() {
           if (!newImgSrc) {
             console.error("Image source is invalid");
           } else {
-            currentImg.src = `/Slices/${newImgSrc}`;
+            currentImg.src = `./Slices/${newImgSrc}`;
           }
           intObs.unobserve(node); // detach the observer when done
         }
@@ -45,7 +45,7 @@ function MovieListContainer() {
   }, []);
 
   useEffect(() => {
-    imagesRef.current = document.querySelectorAll(".card-img-top");
+    imagesRef.current = document.querySelectorAll(".card-img");
 
     if (imagesRef.current) {
       imagesRef.current.forEach((img) => imgObserver(img));

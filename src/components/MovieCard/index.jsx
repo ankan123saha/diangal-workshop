@@ -11,10 +11,11 @@ const MovieCard = ({ movieData }) => {
         width="85px"
         height="127px"
         data-src={download_url}
+        className="card-img"
         onError={(e) => {
-          e.currentTarget.src = "/Slices/placeholder_for_missing_posters.png";
+          e.currentTarget.src = "./Slices/placeholder_for_missing_posters.png";
         }}
-        src="/Slices/placeholder_for_missing_posters.png"
+        src="./Slices/placeholder_for_missing_posters.png"
       />
       <div className={styles.cardFooter}>{name}</div>
     </div>
