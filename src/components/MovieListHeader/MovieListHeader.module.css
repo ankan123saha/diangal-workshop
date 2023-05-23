@@ -4,6 +4,7 @@
   /* padding: 36px 30px; */
   position: fixed;
   top: 0px;
+  width: 100%;
 }
 .listHeader p {
   padding-left: 20px;
@@ -19,13 +20,42 @@
   width: 100%;
   align-items: center;
 }
-.navBar p{
+.navBar p {
   padding-left: 30px;
 }
 
-.navBar img{
+.navBar img {
   padding-right: 30px;
 }
-.navBar  p img{
+.navBar p img {
   padding-right: 10px;
+}
+.searchInput {
+  position: relative;
+}
+.searchInput {
+  width: 100%;
+  transition: opacity 0.3s;
+  height: 24px;
+  position: relative;
+  top: -73px;
+  width: 85%;
+  margin: auto;
+}
+
+.searchInput input:invalid + small:after {
+  content: "Enter atleast 2 characters";
+  color: #fff;
+  position: absolute;
+  left: 0;
+  bottom: -25px;
+}
+.searchInputInitialinput,
+.searchInput input {
+  width: 100%;
+  height: 25px;
+}
+
+.searchInputInitial {
+  opacity: 0;
 }

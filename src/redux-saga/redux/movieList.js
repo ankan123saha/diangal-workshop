@@ -4,6 +4,8 @@ const initialState = {
   movieList: [],
   metaData: null,
   pager: { page: 1 },
+  searchResult: [],
+  searchString: ''
 };
 
 const {
@@ -11,7 +13,9 @@ const {
     fetchMovieListStart,
     fetchMovieListSuccess,
     fetchMovieListFailure,
-    advancePager
+    advancePager,
+    setSearchResult,
+    setSearchString
   },
   reducer,
 } = createSlice({
@@ -41,8 +45,23 @@ const {
       ...state,
       pager: { page: state.pager.page + 1 },
     }),
+    setSearchResult: (state, action) => ({
+      ...state,
+      searchResult: action.payload,
+    }),
+    setSearchString: (state, action) => ({
+      ...state,
+      searchString: action.payload,
+    }),
   },
 });
 
 export default reducer;
-export { fetchMovieListStart, fetchMovieListSuccess, fetchMovieListFailure, advancePager };
+export {
+  fetchMovieListStart,
+  fetchMovieListSuccess,
+  fetchMovieListFailure,
+  advancePager,
+  setSearchResult,
+  setSearchString
+};

@@ -11,9 +11,12 @@ import MovieListHeader from "../MovieListHeader";
 
 function MovieListContainer() {
   const [hasMore, setHasMore] = useState(true);
-  const { movieList, pager } = useSelector((state) => state);
+  const { movieList, pager, searchResult, searchString } = useSelector(
+    (state) => state
+  );
   const dispatch = useDispatch();
 
+  const listItems = searchString.length > 1 ? searchResult : movieList;
   useEffect(() => {
     dispatch(fetchMovieListStart(pager?.page));
   }, [pager?.page]);
@@ -50,18 +53,18 @@ function MovieListContainer() {
     if (imagesRef.current) {
       imagesRef.current.forEach((img) => imgObserver(img));
     }
-  }, [imgObserver, imagesRef, movieList]);
+  }, [imgObserver, imagesRef, listItems]);
 
   return (
     <div className={styles.pageContainer}>
       <MovieListHeader />
       <InfiniteScroll
-        dataLength={movieList.length}
+        dataLength={listItems.length}
         className={styles.gridContainer}
         next={handleMoviesLoader}
         hasMore={pager?.page < 3}
       >
-        {movieList.map((movie, index) => (
+        {listItems.map((movie, index) => (
           <MovieCard key={index} movieData={movie} />
         ))}
       </InfiniteScroll>
