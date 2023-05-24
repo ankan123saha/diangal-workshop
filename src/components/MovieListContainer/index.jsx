@@ -68,6 +68,7 @@ function MovieListContainer() {
           <MovieCard key={index} movieData={movie} />
         ))}
       </InfiniteScroll>
+      {listItems.length === 0 && <div>No result found</div>}
     </div>
   );
 }

@@ -27,12 +27,12 @@ const MovieListHeader = () => {
 
   return (
     <div className={styles.listHeader}>
-      <img src="./Slices/nav_bar.png" alt="" />
+      <img src="./diangal-workshop/Slices/nav_bar.png" alt="" />
       <div className={styles.navBar}>
         <p>
           {showSearchIcon && (
             <img
-              src="./Slices/Back.png"
+              src="./diangal-workshop/Slices/Back.png"
               alt=""
               width="18px"
               height="auto"
@@ -49,15 +49,19 @@ const MovieListHeader = () => {
           <>
             {showSearchBox ? (
               <img
-                src="./Slices/close.png"
-                onClick={() => setShowSearchBox(false)}
+                src="./diangal-workshop/Slices/close.png"
+                onClick={() => {
+                  setShowSearchBox(false)
+                  dispatch(setSearchString(""));
+
+                }}
                 alt=""
                 width="18px"
                 height="18px"
               />
             ) : (
               <img
-                src="./Slices/search.png"
+                src="./diangal-workshop/Slices/search.png"
                 onClick={() => setShowSearchBox(true)}
                 alt=""
                 width="18px"
@@ -75,7 +79,7 @@ const MovieListHeader = () => {
         >
           <input
             type="text"
-            autoFocus
+            autoFocus={true}
             placeholder="Type here to search..."
             onChange={handleSearch}
             minlength="2"
