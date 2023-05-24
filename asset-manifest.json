@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/diangal-workshop/static/css/main.d5ec51e5.css",
-    "main.js": "/diangal-workshop/static/js/main.3c93db7c.js",
+    "main.js": "/diangal-workshop/static/js/main.4f7bbd2c.js",
     "static/js/787.835ff1a1.chunk.js": "/diangal-workshop/static/js/787.835ff1a1.chunk.js",
     "static/media/logo.svg": "/diangal-workshop/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
     "index.html": "/diangal-workshop/index.html",
     "main.d5ec51e5.css.map": "/diangal-workshop/static/css/main.d5ec51e5.css.map",
-    "main.3c93db7c.js.map": "/diangal-workshop/static/js/main.3c93db7c.js.map",
+    "main.4f7bbd2c.js.map": "/diangal-workshop/static/js/main.4f7bbd2c.js.map",
     "787.835ff1a1.chunk.js.map": "/diangal-workshop/static/js/787.835ff1a1.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.d5ec51e5.css",
-    "static/js/main.3c93db7c.js"
+    "static/js/main.4f7bbd2c.js"
   ]
 }
