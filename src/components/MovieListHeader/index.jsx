@@ -27,12 +27,12 @@ const MovieListHeader = () => {
 
   return (
     <div className={styles.listHeader}>
-      <img src="./diangal-workshop/Slices/nav_bar.png" alt="" />
+      <img src="./Slices/nav_bar.png" alt="" />
       <div className={styles.navBar}>
         <p>
           {showSearchIcon && (
             <img
-              src="./diangal-workshop/Slices/Back.png"
+              src="./Slices/Back.png"
               alt=""
               width="18px"
               height="auto"
@@ -49,7 +49,7 @@ const MovieListHeader = () => {
           <>
             {showSearchBox ? (
               <img
-                src="./diangal-workshop/Slices/close.png"
+                src="./Slices/close.png"
                 onClick={() => {
                   setShowSearchBox(false)
                   dispatch(setSearchString(""));
@@ -61,7 +61,7 @@ const MovieListHeader = () => {
               />
             ) : (
               <img
-                src="./diangal-workshop/Slices/search.png"
+                src="./Slices/search.png"
                 onClick={() => setShowSearchBox(true)}
                 alt=""
                 width="18px"
