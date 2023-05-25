@@ -38,7 +38,7 @@ function MovieListContainer() {
           if (!newImgSrc) {
             console.error("Image source is invalid");
           } else {
-            currentImg.src = `./Slices/${newImgSrc}`;
+            currentImg.src = `./diangal-workshop/Slices/${newImgSrc}`;
           }
           intObs.unobserve(node); // detach the observer when done
         }

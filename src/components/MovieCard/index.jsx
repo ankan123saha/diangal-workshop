@@ -13,9 +13,9 @@ const MovieCard = ({ movieData }) => {
         data-src={download_url}
         className="card-img"
         onError={(e) => {
-          e.currentTarget.src = "./Slices/placeholder_for_missing_posters.png";
+          e.currentTarget.src = "./diangal-workshop/Slices/placeholder_for_missing_posters.png";
         }}
-        src="./Slices/placeholder_for_missing_posters.png"
+        src="./diangal-workshop/Slices/placeholder_for_missing_posters.png"
       />
       <div className={styles.cardFooter}>{name}</div>
     </div>
